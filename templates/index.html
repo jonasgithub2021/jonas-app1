@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sample web</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+
+</head>
+<body>
+    <img src="logo.jpg" alt="this is a computer">
+    <br>
+
+    <form action="get_grades" method="post">
+        {% for message in get_flashed_messages() %}
+
+        <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name ="name_input">
+        <br>
+        <input type="submit" value="show_grade" id="sh_grade">
+
+    </form>
+</body>
+</html>
